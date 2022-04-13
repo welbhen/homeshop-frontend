@@ -1,0 +1,67 @@
+.product {
+    margin-bottom: 50px;
+}
+
+.product img {
+    border: 3px solid #dcdcdc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 20px;
+    max-height: 210px;
+    width: 100%;
+}
+
+.product .badge {
+    margin-top: 2px;
+    margin-bottom: 0;
+    display: inline;
+}
+
+.product-name {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    margin-top: 0;
+    line-height: 15px;
+    display: block;
+}
+.product-name:hover,
+.product-name:active {
+    color: #a8a8a8;
+}
+
+.buttons {
+    display: inline-block;
+}
+
+.btn-adm {
+    padding: 1px 1px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--primary);
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+}
+.btn-adm:hover {
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+
+.btn-adm-del {
+    padding: 1px 1px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--primary);
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+}
+.btn-adm-del:hover {
+    border: 1px solid var(--secondary);
+    color: var(--primary);
+    background-color: red;
+}

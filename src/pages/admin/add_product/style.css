@@ -1,0 +1,19 @@
+.container-content {
+    display: block;
+    text-align: center;
+}
+.box {
+    display: inline-block;
+}
+.menu-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 0;
+}
+.menu-container input {
+    margin: 0 0 5px 5px;
+    padding: 0;
+}

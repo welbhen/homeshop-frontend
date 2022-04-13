@@ -1,0 +1,102 @@
+.order {
+    border: 5px solid var(--secondary);
+    padding-bottom: 7px;
+    margin: 20px 0;
+    display: inline-block;
+}
+
+h2,
+h4,
+h5 {
+    text-align: left;
+}
+
+.products {
+    border: 1px solid var(--secondary);
+    padding: 5px;
+    margin: 20px 0px;
+}
+
+.input-container {
+    display: block;
+    width: 50%;
+}
+.input-container h4 {
+    margin-bottom: 0;
+    border-radius: 3.2px;
+    border: solid 0.8px var(--secondary);
+    border-bottom: none;
+    background-color: inherit;
+    text-align: center;
+    padding: 5px;
+    background-color: #dcdcdc
+}
+.input-container h3 {
+    font-size: 20px;
+}
+
+.flex-container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border-radius: 3.2px;
+    border: solid 0.8px var(--secondary);
+    background-color: inherit;
+}
+
+.flex-container-half {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border-radius: 3.2px;
+    border: solid 0.8px var(--secondary);
+    background-color: inherit;
+}
+.flex-container-half h5:first-of-type {
+    border-right: solid 0.8px var(--secondary);
+}
+
+.prompt {
+    background-color: #dcdcdc;
+    width: 40%;
+    height: 25px;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 0.6px;
+    margin: 5px 0;
+    border-right: solid 0.8px var(--secondary);
+}
+
+.output {
+    width: 50%;
+    height: 25px;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.prompt-half {
+    background-color: #dcdcdc;
+    width: 20%;
+    height: 25px;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 0.6px;
+    margin: 5px 0;
+    border-right: solid 0.8px var(--secondary);
+}
+
+.output-half {
+    width: 25%;
+    height: 25px;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.shipped-finished {
+    background-color: blue;
+    color: white;
+}

@@ -1,0 +1,25 @@
+.cart-button {
+    position: relative;
+    float: right;
+    z-index: 999;
+    margin-top: -120px;
+    margin-right: 30px;
+}
+.user-button {
+    position: relative;
+    float: left;
+    z-index: 999;
+    margin-top: -120px;
+    margin-left: 30px;
+}
+
+header img {
+    width: 200px;
+}
+
+.link,
+.link:hover,
+.link:active {
+    text-decoration: none;
+    color: #dcdcdc;
+}

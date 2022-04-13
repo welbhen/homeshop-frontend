@@ -1,0 +1,13 @@
+.btn-container {
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+    margin: 10px 0;
+}
+.btn-container .btn {
+    margin: 0px 2px;
+}
+
+.link {
+    color: white;
+}
