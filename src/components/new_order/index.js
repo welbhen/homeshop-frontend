@@ -1,8 +1,9 @@
-import Product from "../product/card_order";
-import './style.css';
 import { useDispatch } from 'react-redux';
 import { shipOrder, requestNewOrders } from '../../store/modules/products/actions';
 import Swal from 'sweetalert2';
+
+import Product from "../product/card_order";
+import './style.css';
 
 const Order = (order) => {
     const dispatch = useDispatch();

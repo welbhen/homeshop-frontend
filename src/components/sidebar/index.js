@@ -1,10 +1,11 @@
-import './style.css';
 import { Dock } from 'react-dock';
 import { useState, useEffect } from 'react';
-import Product from '../product/list';
-
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+
+import Product from '../product/list';
+
+import './style.css';
 
 const Sidebar = () => {
     const { cart } = useSelector(state => state.products);

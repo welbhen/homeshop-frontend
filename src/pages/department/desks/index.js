@@ -1,14 +1,12 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { requestDesks } from '../../../store/modules/products/actions';
 import Header from '../../../components/header';
 import Product from '../../../components/product/card';
 import Contact from '../../../components/contact';
 
-import { requestDesks } from '../../../store/modules/products/actions';
-
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-
 const Desks = () => {
-
     const dispatch = useDispatch();
     const { desks } = useSelector((state) => state.products);
 

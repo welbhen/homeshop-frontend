@@ -1,13 +1,11 @@
-import './style.css';
-
 import { addProductToCart } from '../../../store/modules/products/actions';
 import { useDispatch } from 'react-redux';
-
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const Product = (product) => {
+import './style.css';
 
+const Product = (product) => {
     const dispatch = useDispatch();
 
     const addToCart = () => {
@@ -24,9 +22,6 @@ const Product = (product) => {
     
     return (
         <div className="product col-3">
-            <div>
-                
-            </div>
             <img src={product.img1} className="img-fluid align-center" alt="Card product"/> 
             <div className="row">
                 <div className="col-8">

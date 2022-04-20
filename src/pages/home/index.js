@@ -8,7 +8,6 @@ import Product from '../../components/product/card';
 import Contact from '../../components/contact';
 
 const Home = () => {
-    
     const dispatch = useDispatch();
     const { desks, chairs, lighting } = useSelector((state) => state.products);
 

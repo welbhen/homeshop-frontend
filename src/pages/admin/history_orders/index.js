@@ -1,18 +1,17 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Navigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 import { requestOldOrders } from '../../../store/modules/products/actions';
 import Header from '../../../components/header';
 import Order from '../../../components/old_order';
 import Contact from '../../../components/contact';
 import Nav from '../../../components/admin_nav';
+
 import './style.css';
 
-import Swal from 'sweetalert2';
-import { Navigate } from 'react-router-dom';
-
 const NewOrders = (props) => {
-    
     const dispatch = useDispatch();
     const { orders } = useSelector((state) => state.products);
     //console.log(orders);

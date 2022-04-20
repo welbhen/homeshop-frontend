@@ -1,13 +1,12 @@
-import './style.css';
-
-import { addProductQuantity, subProductQuantity, deleteProduct, requestStock } from '../../../store/modules/products/actions';
 import { useDispatch } from 'react-redux';
-
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const Product = (product) => {
+import { addProductQuantity, subProductQuantity, deleteProduct, requestStock } from '../../../store/modules/products/actions';
 
+import './style.css';
+
+const Product = (product) => {
     const dispatch = useDispatch();
 
     const delProduct = () => {

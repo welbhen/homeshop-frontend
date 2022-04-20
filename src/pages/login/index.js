@@ -1,17 +1,16 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate, Navigate } from "react-router-dom";
-import { setCustomer as setStoreCustomer, loginUser} from '../../store/modules/user/actions';
-import './style.css';
+import Swal from 'sweetalert2';
 
+import { setCustomer as setStoreCustomer, loginUser} from '../../store/modules/user/actions';
 import Illustration from '../../assets/illustration.png';
 import Header from '../../components/header';
 import Contact from '../../components/contact';
 
-import Swal from 'sweetalert2';
+import './style.css';
 
 const Login = (props) => {
-
     const dispatch = useDispatch();
     const navigate = useNavigate(); 
 

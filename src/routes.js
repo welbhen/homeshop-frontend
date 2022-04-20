@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './styles/global.css';
-import Sidebar from './components/sidebar';
 import { useSelector } from 'react-redux';
+
+import Sidebar from './components/sidebar';
+
+import './styles/global.css';
 
 // Main routes:
     import Checkout from './pages/checkout/';
@@ -32,22 +34,6 @@ const MyRoutes = () => {
             isAdmin = true;
         }
     }
-    
-    /********  FORMER: ***************************
-    <Route path="/login" element={<Login />} />
-    <Route path="/checkout" element={<Checkout />} />
-    <Route path="/register" element={<Register />} />
-
-    <Route path="/checkout"
-        element={session.isAuthenticated ? <Checkout {...isLogged} {...isAdmin} /> : <Navigate replace to="/login"/>}
-    />
-    <Route path="/login"
-        element={session.isAuthenticated ? <Navigate replace to="/" /> : <Login />}
-    />
-    <Route path="/register"
-        "element={session.isAuthenticated ? <Navigate replace to="/" /> : <Register />}
-    />"
-    *********************************************/
 
     return(
         <>
@@ -70,10 +56,7 @@ const MyRoutes = () => {
                 </Routes>
                 <Sidebar />
             </Router>
-        </>
-        
-        
-        
+        </>      
     );
 };
 

@@ -1,15 +1,15 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
+
+import { addProductToCart, requestProduct } from '../../store/modules/products/actions';
 import Header from '../../components/header';
 import Tab from '../../components/tab';
 import ImageSlider from '../../components/imageSlider';
-import './style.css';
 import Contact from '../../components/contact';
-import { addProductToCart } from '../../store/modules/products/actions';
 
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { requestProduct } from '../../store/modules/products/actions';
-import { useParams } from 'react-router-dom';
-import Swal from 'sweetalert2';
+import './style.css';
 
 const Product = () => {
 
@@ -19,7 +19,7 @@ const Product = () => {
     //console.log("ID:" + id);
     useEffect(() => {
         dispatch(requestProduct(id));
-    }, [dispatch]);
+    }, [dispatch, id]);
 
     let stockInfo = "";
     if(product.quantity > 0){

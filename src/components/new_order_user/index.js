@@ -4,8 +4,7 @@ import './style.css';
 const Order = (order) => {
     let productsList = order.listproducts;
     let shippingInfo = order.shipping;
-
-
+    
     return (
         <div className="row order">
             <h4 className="col-12 mdi mdi-new-box"><b> Order: {order.orderNumber} </b></h4>

@@ -1,19 +1,16 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from "react-router-dom";
-import { setCustomer as setStoreCustomer, registerUser} from '../../store/modules/user/actions';
-//import { Link } from 'react-router-dom';
-import './style.css';
+import { useNavigate, Navigate } from "react-router-dom";
+import Swal from 'sweetalert2';
 
+import { setCustomer as setStoreCustomer, registerUser} from '../../store/modules/user/actions';
 import Illustration from '../../assets/illustration.png';
 import Header from '../../components/header';
 import Contact from '../../components/contact';
 
-import Swal from 'sweetalert2';
-import { Navigate } from 'react-router-dom';
+import './style.css';
 
 const Register = (props) => {
-
     const dispatch = useDispatch();
     const navigate = useNavigate(); 
 
@@ -29,8 +26,10 @@ const Register = (props) => {
         dispatch(setStoreCustomer(customer));
         setTimeout(() => {
             dispatch(registerUser());
-            navigate('/login');
-        }, 100)        
+            setTimeout(() => {
+                navigate('/login');
+            }, 100);
+        }, 100); 
     };
 
     if(props.isLogged){

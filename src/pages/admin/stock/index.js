@@ -1,18 +1,15 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Navigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
+
+import { requestStock } from '../../../store/modules/products/actions';
 import Header from '../../../components/header';
 import Product from '../../../components/product/card_admin';
 import Contact from '../../../components/contact';
 import Nav from '../../../components/admin_nav';
 
-import { requestStock } from '../../../store/modules/products/actions';
-
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-
-import Swal from 'sweetalert2';
-import { Navigate } from 'react-router-dom';
-
 const Stock = (props) => {
-
     const dispatch = useDispatch();
     const { stock } = useSelector((state) => state.products);
 

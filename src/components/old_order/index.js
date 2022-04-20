@@ -2,7 +2,6 @@ import Product from "../product/card_order";
 import './style.css';
 
 const Order = (order) => {
-
     let productsList = order.listproducts;
     let customerInfo = order.customer;
     let shippingInfo = order.shipping;

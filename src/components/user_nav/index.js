@@ -1,8 +1,10 @@
-import './style.css';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { logoutUser } from '../../store/modules/user/actions';
 import Swal from 'sweetalert2';
+
+import { logoutUser } from '../../store/modules/user/actions';
+
+import './style.css';
 
 const UserNav = () => {
     const dispatch = useDispatch();
@@ -17,13 +19,13 @@ const UserNav = () => {
             confirmButtonText: 'Yes!'
         }).then((result) => {
             if (result.isConfirmed) {
-                
                 dispatch(logoutUser());
             }
         }).catch((err) => {
               console.log("An error occured. Error: " + err);
         });
     }
+    
     return (
         <div className="col-12 btn-container">
             <Link className="link" to="/user/">

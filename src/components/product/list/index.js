@@ -1,10 +1,10 @@
-import './style.css';
-
-import { removeProductFromCart } from '../../../store/modules/products/actions';
 import { useDispatch } from 'react-redux';
 
-const Product = (product) => {
+import { removeProductFromCart } from '../../../store/modules/products/actions';
 
+import './style.css';
+
+const Product = (product) => {
     const dispatch = useDispatch();
 
     return (

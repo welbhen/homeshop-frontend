@@ -1,25 +1,24 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
+import Swal from 'sweetalert2';
+
 import { setProduct as setStoreProduct, registerProduct} from '../../../store/modules/products/actions';
 
 import Header from '../../../components/header';
 import Contact from '../../../components/contact';
 import Nav from '../../../components/admin_nav';
+
 import './style.css';
 
-import Swal from 'sweetalert2';
-import { Navigate } from 'react-router-dom';
-
 const AddProduct= (props) => {
-
     const dispatch = useDispatch();
     const navigate = useNavigate(); 
 
     const [product, setProduct] = useState({
         _id: Date.now().toString(),
         name: '',
-        department: '',
+        department: 'desks',
         description: '',
         price: 0,
         additionalInfo: '',
@@ -33,7 +32,9 @@ const AddProduct= (props) => {
         dispatch(setStoreProduct(product));
         setTimeout(() => {
             dispatch(registerProduct());
-            navigate('/admin/stock');
+            setTimeout(() => {
+                navigate('/admin/stock');
+            }, 100);
         }, 100);
     };
 

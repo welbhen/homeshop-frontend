@@ -1,8 +1,9 @@
-import './style.css';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { logoutUser } from '../../store/modules/user/actions';
 import Swal from 'sweetalert2';
+
+import './style.css';
 
 const Contact = () => {
     const dispatch = useDispatch();

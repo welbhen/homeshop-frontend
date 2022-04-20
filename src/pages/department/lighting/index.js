@@ -1,14 +1,12 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { requestLighting } from '../../../store/modules/products/actions';
 import Header from '../../../components/header';
 import Product from '../../../components/product/card';
 import Contact from '../../../components/contact';
 
-import { requestLighting } from '../../../store/modules/products/actions';
-
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-
 const Lighting = () => {
-
     const dispatch = useDispatch();
     const { lighting } = useSelector((state) => state.products);
 

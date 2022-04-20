@@ -1,18 +1,16 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Navigate } from 'react-router-dom';
 
 import { requestOldOrdersUser } from '../../../store/modules/products/actions';
 import Header from '../../../components/header';
 import Order from '../../../components/old_order_user';
 import Contact from '../../../components/contact';
 import Nav from '../../../components/user_nav';
+
 import './style.css';
 
-//import Swal from 'sweetalert2';
-import { Navigate } from 'react-router-dom';
-
 const NewOrdersUser = (props) => {
-    
     const dispatch = useDispatch();
     const { orders } = useSelector((state) => state.products);
     const { session } = useSelector((state) => state.user);
@@ -22,18 +20,10 @@ const NewOrdersUser = (props) => {
         if(session.userID != null){
             dispatch(requestOldOrdersUser(session.userID));
         }
-        
-    }, [dispatch]);
+    }, [dispatch, session.userID]);
 
     //console.log("Inside NewOrdersUser PROPS: " + JSON.stringify(props));
     if(!props.isLogged){
-        /*
-        Swal.fire({
-            icon: 'error',
-            title: 'You are not logged-in!',
-            text: 'You must be logged-in to have access to this page.'
-        });
-        */
         return(
             <Navigate replace to="/login" />
         )

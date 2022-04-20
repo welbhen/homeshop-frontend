@@ -1,17 +1,17 @@
-import './style.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
+import { useNavigate, Navigate } from "react-router-dom";
+import dayjs from 'dayjs';
+import Swal from 'sweetalert2';
+
+import { setTransaction as setStoreTransaction, makePurchase as makeStorePurchase } from '../../store/modules/products/actions';
 import Header from "../../components/header";
 import Product from "../../components/product/list";
 import Contact from '../../components/contact';
-import { setTransaction as setStoreTransaction, makePurchase as makeStorePurchase } from '../../store/modules/products/actions';
 
-import { useDispatch, useSelector } from 'react-redux';
-import { useState } from 'react';
-import dayjs from 'dayjs';
-import Swal from 'sweetalert2';
-import { useNavigate, Navigate } from "react-router-dom";
+import './style.css';
 
 const Checkout = (props) => {
-
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
